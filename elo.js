@@ -3,6 +3,10 @@ var GAME_WEIGHT = 20;
 var BATTLE_POINTS_WEIGHT = 1000;
 
 function calculateElo(player1, player2){
+
+	if(player1.battlePoints == player2.battlePoints){
+		throw new Error("Cannot determin winner.");
+	}
 	var winner = player1.battlePoints > player2.battlePoints ? player1:player2;
 	var loser = player1.battlePoints > player2.battlePoints ? player2:player1;
 
