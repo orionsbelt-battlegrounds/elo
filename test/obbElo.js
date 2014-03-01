@@ -27,6 +27,7 @@ describe("obbElo", function() {
             assert(player2.eloRanking == expected2, "beginElo2:" + beginElo2 + " - player2.eloRanking:" + player2.eloRanking);
         }
 
+
         it("1000v1000", function() {
             testElo(
                 {eloRanking:1000, numberOfGames: 1, battlePoints: 1000}, 1008,
@@ -54,6 +55,27 @@ describe("obbElo", function() {
                 {eloRanking:3500, numberOfGames: 75, battlePoints: 1000}, 3506
             );
         });
+
+        it("Only elo change", function() {
+            var player1 = {eloRanking:1000, numberOfGames: 1, battlePoints: 1000};
+            var player2 = {eloRanking:1000, numberOfGames: 1, battlePoints: 100};
+
+            obbElo.calculateElo(player1, player2);
+
+            assert(player1.numberOfGames == 1);
+            assert(player1.battlePoints == 1000);
+            assert(player2.numberOfGames == 1);
+            assert(player2.battlePoints == 100);
+            
+        });
+
+        it("Equal battle points", function() {
+            var player1 = {eloRanking:1000, numberOfGames: 1, battlePoints: 1000};
+            var player2 = {eloRanking:1000, numberOfGames: 1, battlePoints: 1000};
+
+            assert.throws( function(){obbElo.calculateElo(player1, player2);}, "Cannot determin winner.");
+        });
+
     })
 
 })
