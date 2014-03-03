@@ -7,11 +7,6 @@
     "test": "./node_modules/.bin/mocha --recursive --reporter spec --check-leaks",
     "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
-  "config" : {
-    "blanket": {
-      "pattern": "src"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/orionsbelt-battlegrounds/elo.git"
