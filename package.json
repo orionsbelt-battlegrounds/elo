@@ -1,18 +1,20 @@
 {
-  "name" : "obb.elo",
-  "version" : "0.0.1",
-  "main" : "./elo.js",
-  "private" : false,
-  "scripts" : {
-    "test" : "./node_modules/.bin/mocha --recursive --reporter spec --check-leaks"
+  "name": "obb.elo",
+  "version": "0.0.1",
+  "main": "./elo.js",
+  "private": false,
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --recursive --reporter spec --check-leaks"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/orionsbelt-battlegrounds/elo.git"
+    "type": "git",
+    "url": "https://github.com/orionsbelt-battlegrounds/elo.git"
   },
-  "devDependencies" : {
-    "mocha" : "*",
-    "expect.js" : "*",
-    "browserify" : "*"
+  "devDependencies": {
+    "mocha": "*",
+    "expect.js": "*",
+    "browserify": "*",
+    "coveralls": "*",
+    "mocha-lcov-reporter" : "*"
   }
 }
