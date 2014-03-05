@@ -17,6 +17,7 @@
     "browserify": "*",
     "coveralls": "*",
     "istanbul": "*",
-    "mocha-lcov-reporter": "*"
+    "mocha-lcov-reporter": "*",
+    "node-inspector": "^0.7.0"
   }
 }
