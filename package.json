@@ -18,6 +18,6 @@
     "coveralls": "*",
     "istanbul": "*",
     "mocha-lcov-reporter": "*",
-    "node-inspector": "^0.7.0"
+    "node-inspector": "*"
   }
 }
