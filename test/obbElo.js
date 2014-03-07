@@ -6,10 +6,10 @@ describe("obbElo", function() {
     it("is available", function() {
         assert(obbElo);
     });
-    
+
     it("provides correct name", function() {
-        assert(obbElo.package.name == "obb.elo");
-    }); 
+        assert(obbElo.package.name == "obb-elo");
+    });
 
     it("provides the current version", function() {
         assert(obbElo.package.version);
